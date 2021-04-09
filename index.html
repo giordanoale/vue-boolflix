@@ -47,15 +47,19 @@
         <!-- corpo principale -->
         <main>
             <div class="container">
+
+                <div class="overline fadeInDown" v-if="films == '' ">
+                    <h1 class="tagline">Benvenuto su Boolean Movie Database</h1>
+                    <h2>Cerca un film per iniziare</h2>
+                </div>
+
                 <div class="card" v-for="film in films">
                     <img class="poster-film" :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="">
 
                     <div class="overview">
                         <p> <strong>Titolo: </strong> {{ film.title }} </p>
                         <p> <strong>Titolo Originale: </strong> {{ film.original_title }} </p>
-                        <p> <strong>Voto: </strong> <i class="far fa-star"></i> <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </p>
+                        <p> <strong>Voto: </strong> {{ film.vote_average }} </p>
                         <p> <strong>Overview: </strong> {{ film.overview }} </p>
                     </div>
                 </div>
