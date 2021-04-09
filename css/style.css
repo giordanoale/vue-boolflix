@@ -60,9 +60,14 @@ header button {
 .overview {
     display: none;
     color: #fff;
+    height: 90%;
     width: 90%;
     margin: auto;
-    font-size: 15px;
+    font-size: 12px;
+}
+
+.overview p {
+    margin-bottom: 5px;
 }
 
 /* .poster-film {
