@@ -10,6 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- /vuejs -->
 
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- /google font -->
+
     <!-- axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
     <!-- /axios -->
@@ -33,11 +38,36 @@
         <header>
             <a class="logo" href=""><img src="https://fontmeme.com/permalink/210409/4937b74c6317b36c509baa13669b4b20.png" alt="netflix-font" border="0"></a>
             <label for="search">
-            <input id="search" type="text" placeholder="Effettua una ricerca" v-model="titoloFilm">
+            <input id="search" type="text" placeholder="Effettua una ricerca" v-model="titoloFilm" @keydown.13="search">
             <button @click="search">Cerca</button>
             </label>
         </header>
         <!-- /intestazione -->
+
+        <!-- corpo principale -->
+        <main>
+            <div class="container">
+                <div class="card">
+                    <img class="poster-film" src="https://image.tmdb.org/t/p/w300/1J1e8Uslw8MAE7mIVFh6TU9mPt8.jpg" alt="">
+
+                    <div class="overview">
+                        <p class="name">Titolo</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="poster-film" src="https://image.tmdb.org/t/p/w300/1J1e8Uslw8MAE7mIVFh6TU9mPt8.jpg" alt="">
+                </div>
+
+                <div class="card">
+                    <img class="poster-film" src="https://image.tmdb.org/t/p/w300/1J1e8Uslw8MAE7mIVFh6TU9mPt8.jpg" alt="">
+                </div>
+
+                
+                
+            </div>
+        </main>
+        <!-- /corpo principale -->
 
     </div>
 

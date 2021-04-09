@@ -2,6 +2,7 @@ var app = new Vue ({
     el: "#app",
     data: {
         titoloFilm:"",
+        films: [],
     },
     methods: {
         search: function() {
@@ -13,7 +14,9 @@ var app = new Vue ({
                 }
             })
             .then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
+                this.films = response.data.results;
+                console.log(this.films);
             })
         }
     }
