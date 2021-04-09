@@ -73,6 +73,10 @@ header button {
     background-color: #000;
 }
 
+.imgError {
+    color: #fff;
+}
+
 .poster-film {
     max-height: 450px;
 }
@@ -137,4 +141,8 @@ header button {
 .card:hover .overview {
     display: block;
     cursor: pointer;
+}
+
+.card:hover .imgError {
+    display: none;
 }

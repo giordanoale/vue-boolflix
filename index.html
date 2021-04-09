@@ -59,6 +59,8 @@
                 <div class="card" v-for="film in films">
                     <img class="poster-film" :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="">
 
+                    <p class="imgError" v-show="film.poster_path == null">Immagine non disponibile</p>
+
                     <div class="overview">
                         <p> <strong>Titolo: </strong> {{ film.title }} </p>
                         <p> <strong>Titolo Originale: </strong> {{ film.original_title }} </p>
