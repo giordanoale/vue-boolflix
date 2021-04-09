@@ -47,24 +47,17 @@
         <!-- corpo principale -->
         <main>
             <div class="container">
-                <div class="card">
-                    <img class="poster-film" src="https://image.tmdb.org/t/p/w300/1J1e8Uslw8MAE7mIVFh6TU9mPt8.jpg" alt="">
+                <div class="card" v-for="film in films">
+                    <img class="poster-film" :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="">
 
                     <div class="overview">
-                        <p class="name">Titolo</p>
+                        <p> <strong>Titolo: </strong>{{ film.title }}</p>
+                        <p> <strong>Titolo Originale: </strong> {{ film.original_title }}</p>
+                        <p> <strong>Voto: </strong> {{ film.vote_average }}</p>
+                        <p> <strong>Overview: </strong> {{ film.overview }}</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img class="poster-film" src="https://image.tmdb.org/t/p/w300/1J1e8Uslw8MAE7mIVFh6TU9mPt8.jpg" alt="">
-                </div>
-
-                <div class="card">
-                    <img class="poster-film" src="https://image.tmdb.org/t/p/w300/1J1e8Uslw8MAE7mIVFh6TU9mPt8.jpg" alt="">
-                </div>
-
-                
-                
             </div>
         </main>
         <!-- /corpo principale -->

@@ -59,9 +59,20 @@ header button {
 
 .overview {
     display: none;
+    color: #fff;
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
 }
 
-.poster-film:hover {
+/* .poster-film {
+    display: none;
+} */
+
+.card:hover .poster-film{
     display: none;
 }
 
+.card:hover .overview {
+    display: block;
+}

@@ -18,6 +18,8 @@ var app = new Vue ({
                 this.films = response.data.results;
                 console.log(this.films);
             })
+
+            this.titoloFilm = "";
         }
     }
 }) 
