@@ -15,6 +15,7 @@ body {
 header {
     background-color: #000;
     display: flex;
+    z-index: 10;
     justify-content: space-around;
     align-items: center;
     position: fixed;
@@ -57,7 +58,7 @@ header button {
 }
 
 .tagline {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
@@ -70,6 +71,10 @@ header button {
     justify-content: center;
     align-items: center;
     background-color: #000;
+}
+
+.poster-film {
+    max-height: 450px;
 }
 
 .fadeInDown {
