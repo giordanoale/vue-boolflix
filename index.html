@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- /css -->
 
-    <title>Document</title>
+    <title>Boolflix</title>
 </head>
 
 <body>
@@ -31,10 +31,10 @@
 
         <!-- intestazione -->
         <header>
-            <h1>BOOLFLIX</h1>
+            <a class="logo" href=""><img src="https://fontmeme.com/permalink/210409/4937b74c6317b36c509baa13669b4b20.png" alt="netflix-font" border="0"></a>
             <label for="search">
-            <input id="search" type="text" placeholder="Effettua una ricerca">
-            <button>Cerca</button>
+            <input id="search" type="text" placeholder="Effettua una ricerca" v-model="titoloFilm">
+            <button @click="search">Cerca</button>
             </label>
         </header>
         <!-- /intestazione -->

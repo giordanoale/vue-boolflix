@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: grey;
+}
+
 header {
     background-color: #000;
     display: flex;
@@ -13,7 +17,18 @@ header {
     width: 100%;
 }
 
-header h1 {
-    color: red;
-    margin: 20px 0px;
+header .logo {
+    margin: 10px 0px;
+}
+
+header #search {
+    height: 30px;
+    width: 180px;
+    text-align: center;
+}
+
+header button {
+    height: 30px;
+    width: 55px;
+    text-align: center;
 }
