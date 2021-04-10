@@ -17,13 +17,16 @@ var app = new Vue ({
                 // console.log(response.data);
                 this.films = response.data.results;
                 for (var i = 0; i < this.films.length; i++) {
-                    this.films[i].vote_average = Math.ceil(this.films[i].vote_average / 2)
+                    this.films[i].vote_average = Math.ceil(this.films[i].vote_average / 2);
                 };
+            
                 console.log(this.films);
+
             })
 
             this.titoloFilm = "";
-        }, 
+        },
+        
     },
     
 }) 
