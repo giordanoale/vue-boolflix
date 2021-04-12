@@ -67,7 +67,8 @@
                         <p> <strong>Voto: </strong>
                             <i class="fas fa-star yellow" v-for="index in film.vote_average"></i><i class="far fa-star" v-for="index in 5-film.vote_average"></i>                          
                         </p>
-                        <p> <strong>Lingua originale: </strong> {{ film.original_language }} </p>
+                        <p class="language"> <strong>Lingua originale: </strong>
+                            <img class="language-flag" :src=" 'img/' + film.original_language + '.png' " alt=""> </p>
                         <p> <strong>Overview: </strong> {{ film.overview }} </p>
                     </div>
                 </div>

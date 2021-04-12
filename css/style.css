@@ -81,6 +81,16 @@ header button {
     max-height: 450px;
 }
 
+.language {
+    display: flex;
+    align-items: center;
+}
+
+.language-flag {
+    height: 20px;
+    margin-left: 10px;
+}
+
 .fadeInDown {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
