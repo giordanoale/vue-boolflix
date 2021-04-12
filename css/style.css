@@ -77,20 +77,6 @@ header button {
     color: #fff;
 }
 
-.poster-film {
-    max-height: 450px;
-}
-
-.language {
-    display: flex;
-    align-items: center;
-}
-
-.language-flag {
-    height: 20px;
-    margin-left: 10px;
-}
-
 .fadeInDown {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
@@ -137,6 +123,31 @@ header button {
 
 .overview p {
     margin-bottom: 5px;
+}
+
+.poster-film {
+    max-height: 450px;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+}
+
+.language-flag {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.container-trailer {
+    display: flex;
+    justify-content: center;
+}
+
+.trailer {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 /* .poster-film {
