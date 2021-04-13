@@ -44,8 +44,7 @@ header button {
     margin: auto;
     padding-top: 150px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .overline {
@@ -54,7 +53,7 @@ header button {
     align-items: center;
     flex-direction: column;
     color: #fff;
-    text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
 }
 
 .tagline {
@@ -62,15 +61,30 @@ header button {
     margin-bottom: 20px;
 }
 
+.card_name {
+    color: #fff;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.card-wrapper {
+    display: flex;
+    overflow-x: scroll;
+}
+
 .card {
     border: 1px solid #fff;
-    width: 302px;
+    min-width: 302px;
+    max-width: 302px;
     height: 452px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #000;
+    margin-right: 30px;
 }
 
 .imgError {

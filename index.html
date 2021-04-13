@@ -56,51 +56,61 @@
                 <!-- /scritta iniziale -->
 
                 <!-- card -->
-                <div class="card" v-for="film in films">
-                    <img class="poster-film" :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="">
+                <div>
+                    <h2 class="card_name" v-if="films.length > 0">Film</h2>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card" v-for="film in films">
+                        <img class="poster-film" :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="">
 
-                    <p class="imgError" v-show="film.poster_path == null">Immagine non disponibile</p>
+                        <p class="imgError" v-show="film.poster_path == null">Immagine non disponibile</p>
 
-                    <div class="overview">
-                        <p> <strong>Tipo: </strong> Film </p>
-                        <p> <strong>Titolo: </strong> {{ film.title }} </p>
-                        <p> <strong>Titolo Originale: </strong> {{ film.original_title }} </p>
-                        <p> <strong>Voto: </strong>
-                            <i class="fas fa-star yellow" v-for="index in film.vote_average"></i><i class="far fa-star" v-for="index in 5-film.vote_average"></i>                          
-                        </p>
-                        <p class="language"> <strong>Lingua originale: </strong>
-                            <img class="language-flag" :src=" 'img/' + film.original_language + '.png' " alt=""> 
-                        </p>
-                        <p> <strong>Overview: </strong> {{ film.overview }} </p>
-                        <p class="container-trailer">
-                            <a class="trailer" :href="'https://www.youtube.com/results?search_query=' + film.title + 'trailer'" target="_blank">
-                                <strong>Guarda il Trailer</strong>
-                            </a>
-                        </p>
+                        <div class="overview">
+                            <p> <strong>Tipo: </strong> Film </p>
+                            <p> <strong>Titolo: </strong> {{ film.title }} </p>
+                            <p> <strong>Titolo Originale: </strong> {{ film.original_title }} </p>
+                            <p> <strong>Voto: </strong>
+                                <i class="fas fa-star yellow" v-for="index in film.vote_average"></i><i class="far fa-star" v-for="index in 5-film.vote_average"></i>                          
+                            </p>
+                            <p class="language"> <strong>Lingua originale: </strong>
+                                <img class="language-flag" :src=" 'img/' + film.original_language + '.png' " alt=""> 
+                            </p>
+                            <p> <strong>Overview: </strong> {{ film.overview }} </p>
+                            <p class="container-trailer">
+                                <a class="trailer" :href="'https://www.youtube.com/results?search_query=' + film.title + 'trailer'" target="_blank">
+                                    <strong>Guarda il Trailer</strong>
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card" v-for="show in series">
-                    <img class="poster-film" :src=" 'https://image.tmdb.org/t/p/w300' + show.poster_path" alt="">
+                <div>
+                    <h2 class="card_name" v-if="series.length > 0">Serie TV</h2>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card" v-for="show in series">
+                        <img class="poster-film" :src=" 'https://image.tmdb.org/t/p/w300' + show.poster_path" alt="">
 
-                    <p class="imgError" v-show="show.poster_path == null">Immagine non disponibile</p>
+                        <p class="imgError" v-show="show.poster_path == null">Immagine non disponibile</p>
 
-                    <div class="overview">
-                        <p> <strong>Tipo: </strong> Serie TV </p>
-                        <p> <strong>Titolo: </strong> {{ show.name }} </p>
-                        <p> <strong>Titolo Originale: </strong> {{ show.original_name }} </p>
-                        <p> <strong>Voto: </strong>
-                            <i class="fas fa-star yellow" v-for="index in show.vote_average"></i><i class="far fa-star" v-for="index in 5-show.vote_average"></i>                          
-                        </p>
-                        <p class="language"> <strong>Lingua originale: </strong>
-                            <img class="language-flag" :src=" 'img/' + show.original_language + '.png' " alt=""> 
-                        </p>
-                        <p> <strong>Overview: </strong> {{ show.overview }} </p>
-                        <p class="container-trailer">
-                            <a class="trailer" :href="'https://www.youtube.com/results?search_query=' + show.name + 'trailer'" target="_blank">
-                                <strong>Guarda il Trailer</strong>
-                            </a>
-                        </p>
+                        <div class="overview">
+                            <p> <strong>Tipo: </strong> Serie TV </p>
+                            <p> <strong>Titolo: </strong> {{ show.name }} </p>
+                            <p> <strong>Titolo Originale: </strong> {{ show.original_name }} </p>
+                            <p> <strong>Voto: </strong>
+                                <i class="fas fa-star yellow" v-for="index in show.vote_average"></i><i class="far fa-star" v-for="index in 5-show.vote_average"></i>                          
+                            </p>
+                            <p class="language"> <strong>Lingua originale: </strong>
+                                <img class="language-flag" :src=" 'img/' + show.original_language + '.png' " alt=""> 
+                            </p>
+                            <p> <strong>Overview: </strong> {{ show.overview }} </p>
+                            <p class="container-trailer">
+                                <a class="trailer" :href="'https://www.youtube.com/results?search_query=' + show.name + ' trailer'" target="_blank">
+                                    <strong>Guarda il Trailer</strong>
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <!-- /card -->
