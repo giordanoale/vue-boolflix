@@ -71,7 +71,7 @@ header button {
 
 .card-wrapper {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .card {
@@ -133,6 +133,7 @@ header button {
     width: 90%;
     margin: auto;
     font-size: 12px;
+    overflow-y: auto;
 }
 
 .overview p {

@@ -22,7 +22,8 @@ var app = new Vue ({
                         this.films[i].vote_average = Math.ceil(this.films[i].vote_average / 2);
                     };
                 
-
+                    this.films.sort((a,b) => b.vote_count - a.vote_count);
+                    
                 })
 
                 axios.get('https://api.themoviedb.org/3/search/tv', {
@@ -37,8 +38,9 @@ var app = new Vue ({
                     for (var i = 0; i < this.series.length; i++) {
                         this.series[i].vote_average = Math.ceil(this.series[i].vote_average / 2);
                     };
+
+                    this.series.sort((a,b) => b.vote_count - a.vote_count);
                 
-                    console.log(this.series);
                 })
 
             this.titoloFilm = "";
